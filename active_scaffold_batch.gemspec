@@ -13,11 +13,11 @@ Gem::Specification.new do |s|
   s.email = "activescaffold@googlegroups.com"
   s.authors = ["Sergio Cambra", "Volker Hochstein"]
   s.require_paths = ["lib"]
-  s.files = `git ls-files {app,config,frontends,lib,public,shoulda_macros,vendor}`.split("\n") + %w[LICENSE.txt README]
+  s.files = Dir["{app,config,frontends,lib,public,shoulda_macros,vendor}/**/*"] + %w[LICENSE.txt README]
   s.extra_rdoc_files = [
     "README"
   ]
-  s.test_files = `git ls-files test`.split("\n")
+  s.test_files = Dir["test/**/*"]
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.add_runtime_dependency 'active_scaffold', '>= 3.2.11'
